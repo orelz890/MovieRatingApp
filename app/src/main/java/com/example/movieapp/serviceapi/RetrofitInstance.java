@@ -5,17 +5,21 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitInstance {
 
-    private static Retrofit retrofit = null;
-    private static String BASE_URL = "https://api.themoviedb.org/3/";
+    private static final String BASE_URL = "https://api.themoviedb.org/3/";
 
-    public static MovieApiService getService(){
+    // Private constructor to prevent instantiation
+    private RetrofitInstance() {}
 
-        if (retrofit == null) {
-            retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
-        }
-        return retrofit.create(MovieApiService.class);
+    // Inner static class responsible for holding the Singleton instance
+    private static class RetrofitHolder {
+        private static final Retrofit INSTANCE = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
+
+    // Public method to access the Singleton Retrofit instance
+    public static MovieApiService getService() {
+        return RetrofitHolder.INSTANCE.create(MovieApiService.class);
     }
 }
