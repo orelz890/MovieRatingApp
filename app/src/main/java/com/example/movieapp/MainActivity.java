@@ -53,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
         getPopularMovies();
 
+        setSwipeToRefresh();
+    }
+
+    private void setSwipeToRefresh() {
         mySwipeRefreshLayout = myBinding.swipeLayout;
         mySwipeRefreshLayout.setColorSchemeResources(R.color.black);
         mySwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

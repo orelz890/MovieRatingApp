@@ -8,9 +8,9 @@ This app was created as a learning project to practice the **MVVM (Model-View-Vi
 
 ---
 
-| Main Feed |
-| :---: |
-| <img src="app/src/main/java/com/example/movieapp/pics/img.png" alt="Main Feed" width="250" /> |
+|                                             Main Feed                                              |
+|:--------------------------------------------------------------------------------------------------:|
+| <img src="app/src/main/java/com/example/movieapp/pics/MainFeed.png" alt="Main Feed" width="250" /> |
 
 
 ## Features 🌟

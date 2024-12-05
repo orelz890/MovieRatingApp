@@ -52,7 +52,7 @@ public class MovieRepository {
             }
 
             @Override
-            public void onFailure(@NonNull Call<Result> call, Throwable t) {
+            public void onFailure(@NonNull Call<Result> call, @NonNull Throwable t) {
 
             }
         });

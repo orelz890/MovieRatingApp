@@ -22,9 +22,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
-            android:elevation="3dp"
+            android:elevation="5dp"
             android:layout_gravity="center"
-            app:cardCornerRadius="1dp">
+            app:cardCornerRadius="3dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -45,7 +45,8 @@
                     android:layout_below="@+id/iv_movie"
                     android:padding="10dp"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:text="@{movie.title}"
                     />
 
@@ -56,7 +57,7 @@
                     android:layout_below="@+id/tv_title"
                     android:padding="10dp"
                     android:textColor="@color/black"
-                    android:textSize="12sp"
+                    android:textSize="14sp"
                     android:text="@{Double.toString(movie.voteAverage)}"
                     />
 

@@ -45,10 +45,6 @@ public class Movie extends BaseObservable
     private Double voteAverage;
 
 
-
-
-
-
     @BindingAdapter({"posterPath"})
     public static void loadImage(ImageView imageView, String imageUrl){
 //         Basic_Url: "base: [https://image.tmdb.org/t/p/] file size: [w500]/"
@@ -60,13 +56,6 @@ public class Movie extends BaseObservable
     }
 
 
-
-
-
-
-
-
-    //    @Bindable
     public Integer getId() {
         return id;
     }
@@ -75,7 +64,6 @@ public class Movie extends BaseObservable
         this.id = id;
     }
 
-    //    @Bindable
     public String getOverview() {
         return overview;
     }
@@ -83,28 +71,23 @@ public class Movie extends BaseObservable
     public void setOverview(String overview)
     {
         this.overview = overview;
-//        notifyPropertyChanged(BR.overview);
     }
 
 
-    //    @Bindable
     public String getPosterPath() {
         return posterPath;
     }
 
     public void setPosterPath(String posterPath) {
         this.posterPath = posterPath;
-//        notifyPropertyChanged(BR.posterPath);
     }
 
-    //    @Bindable
     public String getReleaseDate() {
         return releaseDate;
     }
 
     public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
-//        notifyPropertyChanged(BR.releaseDate);
     }
 
     @Bindable
